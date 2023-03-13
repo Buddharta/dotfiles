@@ -1,0 +1,14 @@
+#Command history
+HISTFILE=$HOME/.zsh_history
+HISTSIZE=10000000
+SAVEHIST=20000000
+export HISTTIMEFORMAT="[%f %t] "
+setopt EXTENDED_HISTORY 
+setopt HIST_IGNORE_ALL_DUPS
+setopt INC_APPEND_HISTORY 
+
+export ZDOTDIR=~/.config/zsh
+source "$HOME/.config/zsh/.zshrc"
+
+export EMSDK_QUIET=1
+export GPG_TTY=$(tty)

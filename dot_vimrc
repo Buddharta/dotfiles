@@ -1,0 +1,59 @@
+syntax on
+
+set nocompatible
+set number
+set mouse=a
+set clipboard=unnamedplus
+set expandtab
+set noerrorbells
+set smartindent
+set rnu
+set numberwidth=1
+set nowrap
+set ignorecase
+set encoding=utf-8
+set cursorline
+set termguicolors
+
+highlight ColoColumn ctermbg=0 guibg=lightgrey
+"For faster commands (SPACE)
+let mapleader = " "
+
+"For reloading Neovim
+nmap <F4> :source $HOME/.vimrc<CR>
+vmap <F4> :source $HOME/.vimrc<CR>
+nnoremap <F3> :setlocal spell! spelllang=en<enter>
+
+
+"With the arrow keys you can resize your splits
+nnoremap <c-right> :vertical resize +5<CR>
+nnoremap <c-left> :vertical resize -5<CR>
+nnoremap <c-up> :resize +5<CR>
+nnoremap <c-down> :resize -5<CR>
+
+nnoremap <leader>w :w<CR>
+
+"you split a terminal with a size of 15
+vnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
+nnoremap <c-t> :split<CR>:ter<CR>:resize 15<CR>
+vnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
+nnoremap <C-\> :split<CR>:ter<CR>:resize 15<CR>
+
+" Move to the next buffer
+" Move to the prevoius buffer
+nnoremap <leader>l :bnext<CR>
+nnoremap <leader>h :bprevious<CR>
+
+" Close the current buffer
+"create a new tab
+nnoremap <leader>qq :bdelete<CR>
+nnoremap <leader>n :tabe<CR>
+
+"vertical split
+"horizontal split
+nnoremap <leader>vs :vsp<CR>
+nnoremap <leader>sp :sp<CR>
+
+" clear search results
+nnoremap <silent> // :noh<CR>
+
