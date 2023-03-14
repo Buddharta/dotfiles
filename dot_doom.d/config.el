@@ -6,8 +6,8 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets.
-(setq user-full-name "John Doe"
-      user-mail-address "john@doe.com")
+(setq user-full-name "Carlos Martinez"
+      user-mail-address "cmartineza@ciencias.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom. Here
 ;; are the three important ones:
@@ -72,4 +72,8 @@
 ;;               ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
 
 (setq TeX-view-program-list '(("zathura" "zathura -P 1 %o")))
-;;(setq org-file-apps '("\\.pdf\\" . "zathura -P 1 %s"))
+
+(add-hook 'org-mode-hook
+          '(lambda ()
+             (delete '("\\.pdf\\'" . default) org-file-apps) 
+             (add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))))
