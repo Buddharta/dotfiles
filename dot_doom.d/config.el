@@ -70,10 +70,16 @@
 ;;               ("\\subsubsection{%s}" . "\\subsubsection*{%s}")
 ;;               ("\\paragraph{%s}" . "\\paragraph*{%s}")
 ;;               ("\\subparagraph{%s}" . "\\subparagraph*{%s}"))))
+;;
+;; ### Set Okular as the default PDF viewer.
+(eval-after-load "tex"
+  '(setcar (cdr (assoc 'output-pdf TeX-view-program-selection)) "Okular"))
 
-(setq TeX-view-program-list '(("zathura" "zathura -P 1 %o")))
+(setq TeX-view-program-list '(("Okular" "okular %s")))
 
 (add-hook 'org-mode-hook
           '(lambda ()
              (delete '("\\.pdf\\'" . default) org-file-apps) 
              (add-to-list 'org-file-apps '("\\.pdf\\'" . "okular %s"))))
+(setq latex-run-command "pdflatex")
+(setq tex-command "pdftex")

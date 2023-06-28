@@ -18,7 +18,9 @@ set colorcolumn=120
 highlight ColoColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('$HOME/.local/share/nvim/plugged')
-
+        
+        Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+        
         "Theme
         Plug 'morhetz/gruvbox'
         Plug 'ayu-theme/ayu-vim'

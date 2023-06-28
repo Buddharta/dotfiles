@@ -9,6 +9,7 @@ setopt INC_APPEND_HISTORY
 
 export ZDOTDIR=~/.config/zsh
 source "$HOME/.config/zsh/.zshrc"
-
-export EMSDK_QUIET=1
+source "$HOME/.profile"
 export GPG_TTY=$(tty)
+
+if [ -e /home/shakya/.nix-profile/etc/profile.d/nix.sh ]; then . /home/shakya/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer

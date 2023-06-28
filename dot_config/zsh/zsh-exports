@@ -1,4 +1,5 @@
 #!/bin/sh
+export PATH=$HOME/node_volumes/.bin:$PATH
 export PATH=$HOME/local/share/go/bin:$PATH
 export GOPATH=$HOME/local/share/go
 export PATH=$HOME/.cargo/bin:$PATH
@@ -7,12 +8,12 @@ export PATH=$HOME/source:$PATH
 export PATH=/usr/bin/julia-1.6.3/bin:$PATH
 export BUN_INSTALL=/home/buddharta/.bun
 export PATH="$BUN_INSTALL/bin:$PATH"
+export PATH="$HOME/bin:$PATH"
+export PATH="/usr/src/acstall/distrobox/usr/binp:$PATH"
 [ -f "/home/buddharta/.ghcup/env" ] && source "/home/buddharta/.ghcup/env" # ghcup-env
 #eval "$(fnm env)"
 eval "$(zoxide init zsh)"
 #eval "`pip completion --zsh`"
-
-export EMSDK_QUIET=1 
 
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/buddharta/miniconda3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
@@ -32,5 +33,3 @@ if [ -f "/home/buddharta/miniconda3/etc/profile.d/mamba.sh" ]; then
 fi
 # <<< conda initialize <<<
 
-#emscripten hook
-source "/home/buddharta/source/emsdk/emsdk_env.sh"
