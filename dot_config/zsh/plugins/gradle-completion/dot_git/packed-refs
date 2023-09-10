@@ -1,0 +1,22 @@
+# pack-refs with: peeled fully-peeled sorted 
+16b04e413c0c264a98ac65375968b0fe26573eaa refs/remotes/origin/background-cache-refresh
+9a7853c5ea2a6be74ecda9785d5e33b9ceb3d557 refs/remotes/origin/background-caching
+ee809d1a84dee77f1992ca895586a70dc5f60218 refs/remotes/origin/dependency-configurations
+cb94553d455ffa696178bf1a2862934dd4435057 refs/remotes/origin/eriwen/first-init-background
+d7d609b92ab6ab2f11b922628cedb17996f8b7f4 refs/remotes/origin/eriwen/issue-49
+01398b279cf0f6cc630fe5f82381811b3e87e259 refs/remotes/origin/gradle5
+25da917cf5a88f3e58f05be3868a7b2748c8afe6 refs/remotes/origin/master
+1dd3421a63a2fe58ea83f2e3847ebd04740a7230 refs/remotes/origin/subdir-completion
+ed6e96d4ba558f5040940c152b528a6e58aa5b0c refs/remotes/origin/xaviarias/use-oh-my-zsh-custom
+67f21f889151fb474a6f22b66976b60cf8c2ebc2 refs/tags/v1.0.0
+^b1592f8b5a713351a0339e3fdb65008bec22f4d2
+3980cd96c040af57707882e371f350d31ee795a0 refs/tags/v1.1.0
+^511ec3d387129c7dfba66d0355b438900bca6a76
+03f74bbc2e66e3669b5274e489584af87b5eceb6 refs/tags/v1.2.0
+^161b4296886845d2e1628a177eac9559e3e34ca7
+8968bf3d2b7d0cecc3097f00d01b0f8e8bbe5354 refs/tags/v1.3.0
+^de087183eb420f05c56aba7b7e380824aa8257c0
+38a1e3bfa953ed66f6aca640861d0deebd59698f refs/tags/v1.3.1
+^71637472766cf41bece3445f57a0ecfc9d1b5f95
+72c547f70251ba044e0b21b04dbcf11e3927b051 refs/tags/v1.4.0
+5bce7f2a6997b9303c8f5803740aa0f11b5cb178 refs/tags/v1.4.1
