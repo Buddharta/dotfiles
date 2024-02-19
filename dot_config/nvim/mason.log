@@ -1,0 +1,6 @@
+[INFO  mié 13 sep 2023 12:50:47] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=typescript-language-server) {}
+[INFO  mié 13 sep 2023 12:50:47] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=eslint-lsp) {}
+[INFO  mié 13 sep 2023 12:50:47] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:184: Executing installer for Package(name=rust-analyzer) {}
+[INFO  mié 13 sep 2023 12:50:51] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:245: Installation succeeded for Package(name=rust-analyzer)
+[INFO  mié 13 sep 2023 12:50:57] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:245: Installation succeeded for Package(name=typescript-language-server)
+[INFO  mié 13 sep 2023 12:50:58] ...acker/start/mason.nvim/lua/mason-core/installer/init.lua:245: Installation succeeded for Package(name=eslint-lsp)

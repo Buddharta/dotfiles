@@ -1,7 +1,9 @@
 #!/bin/sh
+export PATH=$HOME/.config/emacs/bin:$PATH
 export PATH=$HOME/node_volumes/.bin:$PATH
 export PATH=$HOME/local/share/go/bin:$PATH
 export GOPATH=$HOME/local/share/go
+export DOOMDIR=$HOME/.doom.d
 export PATH=$HOME/.cargo/bin:$PATH
 export PATH=$HOME/.emacs.d/bin:$PATH
 export PATH=$HOME/source:$PATH
@@ -11,6 +13,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/src/acstall/distrobox/usr/binp:$PATH"
 [ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env" # ghcup-env
+export PATH=$HOME/.ghcup/bin:$PATH
 #eval "$(fnm env)"
 eval "$(zoxide init zsh)"
 #eval "`pip completion --zsh`"
@@ -32,4 +35,16 @@ if [ -f "$HOME/miniconda3/etc/profile.d/mamba.sh" ]; then
     . "$HOME/miniconda3/etc/profile.d/mamba.sh"
 fi
 # <<< conda initialize <<<
-
+export PATH=$HOME/.local/bin:$PATH
+export PATH=$HOME/source/lem:$PATH
+export PATH=$HOME/.elan/bin:$PATH
+export PATH=$HOME/.cabal/bin:$PATH
+export PATH=/usr/src/acstall/distrobox/usr/binp:$PATH
+export PATH=$HOME/source:$PATH
+export PATH=$HOME/.nix-profile/bin:$PATH
+export PATH=/var/lib/flatpak/exports/bin:$PATH
+export PATH=/usr/lib/jvm/default/bin:$PATH
+export PATH=/usr/bin/vendor_perl:$PATH
+export PATH=/usr/bin/core_perl:$PATH
+export PATH=/nix/var/nix/profiles/default/bin:$PATH
+export PATH=/usr/local/sbin:$PATH

@@ -7,7 +7,7 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
 fi
 
 # The following lines were added by compinstall
-\zstyle :compinstall filename '$ZDOTDIR/.p10k.zsh'
+\zstyle :compinstall filename '$HOME/.p10k.zsh'
 
 ZSH_THEME="powerlevel10k/powerlevel10k"
 

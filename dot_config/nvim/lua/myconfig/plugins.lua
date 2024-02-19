@@ -3,6 +3,9 @@
 -- Only required if you have packer configured as `opt`
 vim.cmd [[packadd packer.nvim]]
 
+require('remote-sshfs').setup({})
+require('telescope').load_extension 'remote-sshfs'
+
 return require('packer').startup(function(use)
   -- Packer can manage itself
 	use 'wbthomason/packer.nvim'
@@ -40,9 +43,11 @@ return require('packer').startup(function(use)
         use 'vim-airline/vim-airline-themes'
 	use 'lilydjwg/colorizer'
 
-	--Language Client(dont know if it conflicts with treesitter)
-	--use 'autozimu/LanguageClient-neovim'
-
+	--sshfs: nvim over SSH basically 
+    use {
+      'nosduco/remote-sshfs.nvim',
+      requires = { {'nvim-telescope/telescope.nvim'} } -- optional if you declare plugin somewhere else
+    }
 	--Completion With Java
 	use 'ncm2/ncm2'
 	use 'roxma/nvim-yarp'
@@ -58,7 +63,13 @@ return require('packer').startup(function(use)
 	use 'Xuyuanp/nerdtree-git-plugin'
 	use 'ryanoasis/vim-devicons'
 
-	--Navigator
+	--Navigation
+    use "nvim-lua/plenary.nvim"
+    use {
+      'nvim-telescope/telescope.nvim', tag = '0.1.5',
+    -- or                            , branch = '0.1.x',
+  requires = { {'nvim-lua/plenary.nvim'} }
+}
 	use 'christoomey/vim-tmux-navigator'
 	use {
     		'junegunn/fzf.vim',
@@ -73,7 +84,6 @@ return require('packer').startup(function(use)
 	--Snippets
 	use 'SirVer/ultisnips'
 	use 'honza/vim-snippets'
-
 	--HTML
 	use 'mattn/emmet-vim'
 
@@ -89,4 +99,3 @@ return require('packer').startup(function(use)
         --Git integration
         use 'tpope/vim-fugitive'
   end)
-

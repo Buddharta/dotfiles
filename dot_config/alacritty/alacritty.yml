@@ -609,7 +609,7 @@ schemes:
       white:   '#282a2e'
   
   ### Ubuntu-pro ###
-  solarized-dark: &ubuntu-pro
+  solarizzed-dark: &ubuntu-pro
     # Default colors
     primary:
       background: '#411934' # base03
