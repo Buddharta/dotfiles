@@ -19,13 +19,13 @@
 ;;
 ;; They all accept either a font-spec, font string ("Input Mono-12"), or xlfd
 ;; font string. You generally only need these two:
-;; (setq doom-font (font-spec :family "monospace" :size 12 :weight 'semi-light)
-;;       doom-variable-pitch-font (font-spec :family "sans" :size 13))
+ (setq doom-font (font-spec :family "JetBrainsMono" :size 14 :weight 'semi-light)
+       doom-variable-pitch-font (font-spec :family "sans" :size 16))
 
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'doom-one)
+(setq doom-theme 'doom-monokai)
 
 ;; If you use `org' and don't want your org files in the default location below,
 ;; change `org-directory'. It must be set before org loads!
@@ -97,43 +97,43 @@
   (org-roam-setup))
 
 ;; CV exporter
-(use-package ox-altacv
-    :load-path "/home/buddharta/org/org-cv/"
-    :init (require 'ox-altacv))
-
-(use-package ox-moderncv
-    :load-path "/home/buddharta/org/org-cv/"
-    :init (require 'ox-moderncv))
-
-(use-package ox-hugocv
-    :load-path "/home/buddharta/org/org-cv/"
-    :init (require 'ox-hugocv))
-
-(after! org
-  (use-package! ox-extra
-    :config
-    (ox-extras-activate '(latex-header-blocks ignore-headlines))))
-
-
-(after! org
-  ;; Import ox-latex to get org-latex-classes and other funcitonality
-  ;; for exporting to LaTeX from org
-  (use-package! ox-latex
-    :init
-    ;; code here will run immediately
-    :config
-    ;; code here will run after the package is loaded
-    (setq org-latex-pdf-process
-          '("pdflatex -interaction nonstopmode -output-directory %o %f"
-            "bibtex %b"
-            "pdflatex -interaction nonstopmode -output-directory %o %f"
-            "pdflatex -interaction nonstopmode -output-directory %o %f"))
-    (setq org-latex-with-hyperref nil) ;; stop org adding hypersetup{author..} to latex export
-    ;; (setq org-latex-prefer-user-labels t)
-
-    ;; deleted unwanted file extensions after latexMK
-    (setq org-latex-logfiles-extensions
-          (quote ("lof" "lot" "tex~" "aux" "idx" "log" "out" "toc" "nav" "snm" "vrb" "dvi" "fdb_latexmk" "blg" "brf" "fls" "entoc" "ps" "spl" "bbl" "xmpi" "run.xml" "bcf" "acn" "acr" "alg" "glg" "gls" "ist")))
-
-    (unless (boundp 'org-latex-classes)
-      (setq org-latex-classes nil)))
+;;(use-package ox-altacv
+;;    :load-path "/home/buddharta/org/org-cv/"
+;;    :init (require 'ox-altacv))
+;;
+;;(use-package ox-moderncv
+;;    :load-path "/home/buddharta/org/org-cv/"
+;;    :init (require 'ox-moderncv))
+;;
+;;(use-package ox-hugocv
+;;    :load-path "/home/buddharta/org/org-cv/"
+;;    :init (require 'ox-hugocv))
+;;
+;;(after! org
+;;  (use-package! ox-extra
+;;    :config
+;;    (ox-extras-activate '(latex-header-blocks ignore-headlines))))
+;;
+;;
+;;(after! org
+;;  ;; Import ox-latex to get org-latex-classes and other funcitonality
+;;  ;; for exporting to LaTeX from org
+;;  (use-package! ox-latex
+;;    :init
+;;    ;; code here will run immediately
+;;    :config
+;;    ;; code here will run after the package is loaded
+;;    (setq org-latex-pdf-process
+;;          '("pdflatex -interaction nonstopmode -output-directory %o %f"
+;;            "bibtex %b"
+;;            "pdflatex -interaction nonstopmode -output-directory %o %f"
+;;            "pdflatex -interaction nonstopmode -output-directory %o %f"))
+;;    (setq org-latex-with-hyperref nil) ;; stop org adding hypersetup{author..} to latex export
+;;    ;; (setq org-latex-prefer-user-labels t)
+;;
+;;    ;; deleted unwanted file extensions after latexMK
+;;    (setq org-latex-logfiles-extensions
+;;          (quote ("lof" "lot" "tex~" "aux" "idx" "log" "out" "toc" "nav" "snm" "vrb" "dvi" "fdb_latexmk" "blg" "brf" "fls" "entoc" "ps" "spl" "bbl" "xmpi" "run.xml" "bcf" "acn" "acr" "alg" "glg" "gls" "ist")))
+;;
+;;    (unless (boundp 'org-latex-classes)
+;;      (setq org-latex-classes nil)))
