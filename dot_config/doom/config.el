@@ -101,6 +101,12 @@
 (add-hook 'org-mode-hook 'variable-pitch-mode)
 (add-hook 'org-mode-hook 'visual-line-mode)
 
+;;ORG-BABEL
+(org-babel-do-load-languages
+ 'org-babel-load-languages
+ '((julia . t)))
+
+
 ;; This is for exporting CV from org I dont know if it works.
 ;;  CV exporter
 ;;(use-package ox-altacv
