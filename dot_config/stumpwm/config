@@ -1,0 +1,53 @@
+;#-quicklisp
+(let ((quicklisp-init (merge-pathnames "quicklisp/setup.lisp"
+				       (user-homedir-pathname))))
+  (when (probe-file quicklisp-init)
+    (load quicklisp-init)))
+
+;; -*- lisp -*-
+(ql:quickload "stumpwm")
+
+;; This is for stablishing a that we are using the package stumpwm  and this is also our default package.
+;; This will allow us to avoid using the prefix stumpwm: each time we are using a function or a variable from this package.
+(in-package :stumpwm)
+(setf *default-package* :stumpwm)
+
+;;; Remember to git clone stumpwm modules before this (where you want to use them) in y case is in the XDG directory
+;;; Setup Modules and Quicklisp
+(set-module-dir (pathname-as-directory "~/.config/stumpwm/modules/"))
+
+;;font
+(set-font "JetBrainsMono")
+
+;; Sly connection
+;;(ql:quickload "slynk")
+
+;;(require :slynk)
+;;(defcommand stump-slynk-server () ()
+;;  (slynk:create-server :port 4004
+;;                       :dont-close t))
+;;(stump-slynk-server)
+
+;; You can run shell commands, this is for setting the correct keyboard layout and prefix key to the super key
+;;(run-shell-command "setxkbmap latam" t)
+
+
+(run-shell-command "xrandr --output HDMI-0 --primary --mode 1360x768 --output DP-0 --rotate right --mode 1366x768 --right-of HDMI-0
+")
+(run-shell-command "feh --recursive --randomize --bg-fill ~/Pictures/wallpapers")
+
+;; Clicking works
+(setf *mouse-focus-policy* :click)
+
+;; Load Corect files
+(load "~/.config/stumpwm/keybinds.lisp")
+(load "~/.config/stumpwm/theme.lisp")
+(load "~/.config/stumpwm/modeline.lisp")
+
+;; Loads modeline when initializing
+(when *initializing*
+  (mode-line))
+
+;; Startup message
+(setf *startup-message* "Loaded config...")
+

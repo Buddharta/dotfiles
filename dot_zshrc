@@ -13,3 +13,12 @@ source "$HOME/.profile"
 export GPG_TTY=$(tty)
 
 if [ -e /home/shakya/.nix-profile/etc/profile.d/nix.sh ]; then . /home/shakya/.nix-profile/etc/profile.d/nix.sh; fi # added by Nix installer
+
+# >>> juliaup initialize >>>
+
+# !! Contents within this block are managed by juliaup !!
+
+path=('/home/buddharta/.juliaup/bin' $path)
+export PATH
+
+# <<< juliaup initialize <<<

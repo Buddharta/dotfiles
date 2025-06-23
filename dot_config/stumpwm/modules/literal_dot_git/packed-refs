@@ -1,0 +1,4 @@
+# pack-refs with: peeled fully-peeled sorted 
+d100f74e5b6fa3e94794982cb0e5d09366ad438c refs/remotes/origin/gnu-pw-mgr
+e72d3d36a63afcad72c8366cd5ed54a969d86efc refs/remotes/origin/master
+a2762328827202b060d519f0a2f0b22d65671b35 refs/remotes/origin/update-readme-script

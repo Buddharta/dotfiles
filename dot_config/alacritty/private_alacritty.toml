@@ -1,4 +1,4 @@
-live_config_reload = true
+general.live_config_reload = true
 
 [colors]
 draw_bold_text_with_bright_colors = true
@@ -88,7 +88,7 @@ hide_when_typing = true
 history = 10000
 multiplier = 3
 
-[shell]
+[terminal.shell]
 program = "/usr/bin/zsh"
 
 [window]
@@ -102,6 +102,8 @@ dynamic_title = true
 [window.class]
 general = "Alacritty"
 instance = "Alacritty"
+
+[terminal]
 
 ##[schemes.doom-one.bright]
 ##black = "#5b6268"

@@ -48,3 +48,8 @@
 ;(unpin! pinned-package another-pinned-package)
 ;; ...Or *all* packages (NOT RECOMMENDED; will likely break things)
 ;(unpin! t)
+(package! eglot-jl)
+(package! julia-mode)
+(package! vterm)
+(package! julia-snail)
+(package! org-roam)
