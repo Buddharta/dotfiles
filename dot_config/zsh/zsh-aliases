@@ -92,9 +92,8 @@ alias mirrord="sudo reflector --latest 50 --number 20 --sort delay --save /etc/p
 alias mirrors="sudo reflector --latest 50 --number 20 --sort score --save /etc/pacman.d/mirrorlist"
 alias mirrora="sudo reflector --latest 50 --number 20 --sort age --save /etc/pacman.d/mirrorlist"
 
-# Cleanup orphaned packages
-alias cleanup='sudo pacman -Rns (pacman -Qtdq)'
-
-# Get the error messages from journalctl
-alias jctl="journalctl -p 3 -xb"
+# Nix Darwin
+alias nixdarwin-switch="sudo darwin-rebuild switch --flake $HOME'/.config/nix-darwin#macos-air'"
+alias nixdarwin-update="nix flake update --flake ~/.config/nix-darwin"
+alias nixdarwin-install="nvim ~/.config/nix-darwin/flake.nix"
 
